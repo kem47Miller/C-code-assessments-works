@@ -1,38 +1,47 @@
-Task 1 final
+//Task 1 final
+
 #include <stdio.h>
+
 // Function takes a pointer to a string
 // and returns the number of spaces replaced
 int replace(char *str)
 {
-int count = 0; // Keep track of spaces replaced
-// Continue until the end of the string is reached
-while (*str != '\0')
-{
-// Check if the current character is a space
-if (*str == ' ')
-{
-*str = '-'; // Replace the space with a minus sign
-count++; // Increase the number of replacements
+    int count = 0; // Keep track of spaces replaced
+
+    // Continue until the end of the string is reached
+    while (*str != '\0')
+    {
+        // Check if the current character is a space
+        if (*str == ' ')
+        {
+            *str = '-'; // Replace the space with a hyphen
+            count++;   // Increase the number of replacements
+        }
+
+        str++; // Move the pointer to the next character
+    }
+
+    return count; // Return the total number of spaces replaced
 }
-str++; // Move the pointer to the next character
-}
-}
-return count; // Return the total number of 
-spaces replaced
-}
+
 int main(void)
 {
-// Create a modifiable string
-char cat[] = "The cat sat on the mat.";
-int n; // Store the number of spaces replaced
-// Display the original string
-printf("String was : %s\n", cat);
-// Replace spaces and store the returned count
-n = replace(cat);
-// Display the modified string
-printf("String is : %s\n", cat);
-// Display the number of spaces replaced
-printf("Number replaced %d\n", n);
-printf("Number replaced %d\n", n);
-return 0; // End the program successfully
+    // Create a modifiable string
+    char cat[] = "The cat sat on the mat.";
+
+    int n; // Store the number of spaces replaced
+
+    // Display the original string
+    printf("String was : %s\n", cat);
+
+    // Replace spaces with hyphens and store the returned count
+    n = replace(cat);
+
+    // Display the modified string
+    printf("String is : %s\n", cat);
+
+    // Display the total number of spaces replaced
+    printf("Number replaced %d\n", n);
+
+    return 0; // End the program successfully
 }
