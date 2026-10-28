@@ -4,6 +4,7 @@
 
 // Function takes a pointer to a string
 // and encodes its lowercase letters
+//void because returns nothing(no count,etc)- has no returning statement it uses breakand just just modifiies o.g string through pointer
 void code(char *str)
 {
     // Original lowercase alphabet
