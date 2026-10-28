@@ -34,7 +34,7 @@ int main(void)
     // Display the original string
     printf("String was : %s\n", cat);
 
-    // Replace spaces with hyphens and store the returned count
+    // Replace spaces with dashes and store the returned count
     n = replace(cat);
 
     // Display the modified string

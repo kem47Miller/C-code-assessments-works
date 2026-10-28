@@ -1,47 +1,57 @@
-Task 2 final
+//Task 2 final
+
 #include <stdio.h>
+
 // Function takes a pointer to a string
 // and encodes its lowercase letters
 void code(char *str)
 {
-// Original lowercase alphabet
-char code1[] = "abcdefghijklmnopqrstuvwxyz";
-// Encoded letters corresponding to code1
-char code2[] = "bpduhijkaltxwmrzfoysvngeqc";
-int i, j;
-int i, j;
-// Go through each character in the input string
-for (i = 0; str[i] != '\0'; i++)
-{
-// Search for the current character in code1
-for (j = 0; code1[j] != '\0'; j++)
-{
-// Check whether the character matches code1[j]
-if (str[i] == code1[j])
-{
-// Replace it with the letter at the same index in 
-code2
-str[i] = code2[j];
-// Stop searching once the letter is found
-break;
+    // Original lowercase alphabet
+    char code1[] = "abcdefghijklmnopqrstuvwxyz";
+
+    // Encoded letters corresponding to code1
+    char code2[] = "bpduhijkaltxwmrzfoysvngeqc";
+
+    int i, j; // Loop counters
+
+    // Go through each character in the input string
+    for (i = 0; str[i] != '\0'; i++)
+    {
+        // Search for the current character in code1
+        for (j = 0; code1[j] != '\0'; j++)
+        {
+            // Check whether the character matches code1[j]
+            if (str[i] == code1[j])
+            {
+                // Replace it with the encoded letter
+                // at the same index in code2
+                str[i] = code2[j];
+
+                // Stop searching once the letter is found
+                break;
+            }
+        }
+
+        // If the character is not found in code1,
+        // it remains unchanged.
+        // This preserves uppercase letters, spaces,
+        // and punctuation.
+    }
 }
-}
-// Characters not found in code1 remain 
-unchanged
-// This preserves uppercase letters, spaces and 
-// This preserves uppercase letters, spaces and 
-punctuation periodt!!!!
-}
-}
+
 int main(void)
 {
-// Create a modifiable/encodes string/sentence
-char cat[] = "The cat sat on the mat.";
-// Display the original string
-printf("String was : %s\n", cat);
-// Encode the string
-code(cat);
-// shows the encoded sentence
-printf("String is : %s\n", cat);
-return 0; // End the program successfully
+    // Create a modifiable/encoded string to encode
+    char cat[] = "The cat sat on the mat.";
+
+    // Show the original string
+    printf("String was : %s\n", cat);
+
+    // Encode the string
+    code(cat);
+
+    // Show the encoded string
+    printf("String is : %s\n", cat);
+
+    return 0; // End the program 
 }
