@@ -16,10 +16,10 @@ void code(char *str)
     int i, j; // Loop counters
 
     // Go through each character in the input string
-    for (i = 0; str[i] != '\0'; i++)
+    for (i = 0; str[i] != '\0'; i++)//outer loop 
     {
         // Search for the current character in code1
-        for (j = 0; code1[j] != '\0'; j++)
+        for (j = 0; code1[j] != '\0'; j++)//inner loop
         {
             // Check whether the character matches code1[j]
             if (str[i] == code1[j])
